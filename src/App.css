@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   
 .App {
   height: 100vh;
@@ -6,12 +11,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 100px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 .heading{
   font-family: 'San-serif';
   font-size: 25px;
+  color: blue;
 }
 .container{
   height: 300px;
@@ -34,7 +40,7 @@ input{
 .switch{
   padding: 5px;
   margin-top: 25px;
-  background-color: rgb(226, 252, 184);
+  background-color: blue;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -46,15 +52,49 @@ input{
 button{
   width: 100px;
   height: 30px;
+  border-radius: 8px;
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
-  border: 2px solid forestgreen;
-  background-color: rgb(226, 252, 184);
+  border: 2px solid blue;
+  background-color: white;
   cursor: pointer;
 }
-p,h3, button, .switch{
-  color: rgb(13, 153, 36);
+p,h3, button {
+  color: blue;
 }
+
+.switch {
+  color: white;
+}
+
 p{
   font-size: 30px;
+  margin-top: 10px;
+}
+@media(max-width:700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle, .right {
+    margin-top: 15px;
+    
+  }
+  .result {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  button {
+    width: 120px;
+    border-radius: 8px;
+    height: 30px;
+    color: black;
+    margin-left: -25px;
+  }
 }
